@@ -327,6 +327,7 @@ def main():
         cv2.drawContours(result,[box_points], 0, (0, 0, 255), 2)
 
     cv2.imshow("Resultado final", result)
+    Image.fromarray( cv2.cvtColor(result, cv2.COLOR_BGR2RGB)).save("Resultado final.png")
     cv2.waitKey(0)
 
 
